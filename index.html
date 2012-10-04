@@ -17,6 +17,9 @@ footer { text-align:center;border-top:1px solid #999; }
 img { max-width:100%; }
 a { color:#666; }
 a:hover { color:#000; }
+.column li {margin-bottom:.4em;}
+.desc {list-style-type:disc;margin-left:1em;padding-left:1em;}
+
 
 /*layout styles*/
 .column {  }
@@ -42,9 +45,23 @@ a:hover { color:#000; }
   	<div class="inner">  
         <h1>Reflowing layouts</h1>
         <ul>
-        	<li><a href="reflowing/mostly-fluid.html">Mostly fluid</a></li>
-            <li><a href="reflowing/column-drop.html">Column drop</a></li>
-            <li><a href="reflowing/layout-shifter.html">Layout shifter</a></li>
+        	<li><a href="reflowing/mostly-fluid.html">Mostly fluid</a>
+            	<ul class="desc">
+                	<li>Most popular pattern</li>
+                    <li>Layout pattern doesnt change until small screen</li>
+                    <li>Fluid grid and images scale down until smallest screen size (becomes stacked)</li>
+                </ul>
+            </li>
+            <li><a href="reflowing/column-drop.html">Column drop</a>
+            	<ul class="desc">
+                	<li>Also popular, keeps main contents grouped by importance</li>
+                </ul>
+            </li>
+            <li><a href="reflowing/layout-shifter.html">Layout shifter</a>
+            	<ul class="desc">
+                	<li>Not as popular because it does a lot of work (different layouts for small, mediumn and large screens)</li>
+                </ul>
+            </li>
         </ul>
       </div>
   </div>
@@ -55,13 +72,17 @@ a:hover { color:#000; }
         	<li><a href="equal-columns/2col.html">Two columns</a></li>
             <li><a href="equal-columns/3col.html">Three columns</a></li>
             <li><a href="equal-columns/4col.html">Four columns</a></li>
-        </ul>    
+        </ul>
+        <p class="note">With break-points, be aware of line/box length</p>    
 	</div>
   </div>
   <div class="column">
     <div class="inner">  
         <h1>Off screen</h1>
-    	
+    	<ul>
+        	<li><a href="off-screen/left.html">Left</a></li>
+            <li><a href="off-screen/right.html">Top</a></li>
+        </ul>
     </div>
   </div>
 </div>
