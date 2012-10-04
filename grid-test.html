@@ -19,16 +19,13 @@ a { color:#666; }
 a:hover { color:#000; }
 .column li {margin-bottom:.4em;}
 .desc {list-style-type:disc;margin-left:1em;padding-left:1em;}
-
-/*layout styles*/
-
-.column1 {background:#ddd;}
+.column1 {}
 .column2 {background:#ccc;}
 
+/*layout styles*/
 .wrap {max-width:1280px;margin:0 auto;}
 .grid {  }
 .grid li { margin-bottom:2%; }
-
 @media screen and (min-width: 30em) {
 	.column1 {width:50%;float:left;}
 	.column2 {width:50%;float:right;}
@@ -42,41 +39,35 @@ a:hover { color:#000; }
 	.column2 {width:40%;}
 	.grid li {width:31.3%;}
 }
-@media screen and (min-width: 70em) {
-	.column1 {width:70%;}
-	.column2 {width:30%;}
+@media screen and (min-width: 65em) {
+	.column1 {width:65%;}
+	.column2 {width:35%;}
 	.grid li {width:22.5%;}
 }
-
-.body {transition:all .2s linear; 
-    -o-transition:all .2s linear; 
-    -moz-transition:all .2s linear; 
-    -webkit-transition:all .2s linear;}
-
 </style>
 </head>
 
 <body>
 <div class="wrap">
-<div class="column1 grid">
-  <ul>
-    	<li><img src="http://placekitten.com/g/200/200" alt="" /></li>
-        <li><img src="http://placekitten.com/g/200/200" alt="" /></li>
-        <li><img src="http://placekitten.com/g/200/200" alt="" /></li>
-        <li><img src="http://placekitten.com/g/200/200" alt="" /></li>
-        <li><img src="http://placekitten.com/g/200/200" alt="" /></li>
-        <li><img src="http://placekitten.com/g/200/200" alt="" /></li>
-        <li><img src="http://placekitten.com/g/200/200" alt="" /></li>
-        <li><img src="http://placekitten.com/g/200/200" alt="" /></li>
-        <li><img src="http://placekitten.com/g/200/200" alt="" /></li>
-        <li><img src="http://placekitten.com/g/200/200" alt="" /></li>
-        <li><img src="http://placekitten.com/g/200/200" alt="" /></li>
-    <li><img src="http://placekitten.com/g/200/200" alt="" /></li>
-    </ul>
-</div>
-<div class="column2">
-	<p>Some aside content here</p>
-</div>
+    <div class="column1 grid">
+      <ul>
+            <li><img src="http://placekitten.com/g/200/200" alt="" /></li>
+            <li><img src="http://placekitten.com/g/200/200" alt="" /></li>
+            <li><img src="http://placekitten.com/g/200/200" alt="" /></li>
+            <li><img src="http://placekitten.com/g/200/200" alt="" /></li>
+            <li><img src="http://placekitten.com/g/200/200" alt="" /></li>
+            <li><img src="http://placekitten.com/g/200/200" alt="" /></li>
+            <li><img src="http://placekitten.com/g/200/200" alt="" /></li>
+            <li><img src="http://placekitten.com/g/200/200" alt="" /></li>
+            <li><img src="http://placekitten.com/g/200/200" alt="" /></li>
+            <li><img src="http://placekitten.com/g/200/200" alt="" /></li>
+            <li><img src="http://placekitten.com/g/200/200" alt="" /></li>
+            <li><img src="http://placekitten.com/g/200/200" alt="" /></li>
+        </ul>
+    </div>
+    <div class="column2">
+        <p>Check that grid items are same height</p>
+    </div>
 </div>
 </body>
 </html>
