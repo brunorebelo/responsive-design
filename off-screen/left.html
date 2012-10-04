@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Off-Canvas Left</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<style>
+html,body,div { margin: 0; padding: 0; border: 0; }
+ol,ul { list-style: none; margin: 0; padding: 0; }
+table { border-collapse: collapse; border-spacing: 0; }
+header,footer,nav,section,article,hgroup,figure { display: block; }
+
+/*Generic styles*/
+body {font-size:.9em;background-color:#eee;font-family:tahoma;}
+footer {text-align:center;border-top:1px solid #999;}
+img {max-width:100%;}
+
+/*Layout start*/
+/*Reference : http://codepen.io/bradfrost/full/sjiCv */
+.wrap {
+	position: relative;
+	-webkit-transition: all 0.3s ease-out;  
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+.wrap.active {left: 16em;}
+a.menu-link {float: left;display: block;padding: 1em;}
+.oc {background: #808080;color: #fff;/*padding: 1em;*/clear: both;overflow: hidden;}
+.js .oc {width: 16em;height: 100%;position: absolute;top: 0;left: -16em;}
+
+.lorem {clear: both;}
+@media screen and (min-width: 48.25em) {
+	a.menu-link {display: none;}
+	.js .oc {position: static;float: left;width: 30%;height: 100%;}
+	.wrap.active {left: 0;}
+	.lorem {clear: none;margin-left: 30%;}
+}
+  </style>
+
+</head>
+
+<body>
+ 
+   
+	<div class="wrap" id="wrap">
+			<a href="#menu" class="menu-link">More</a>
+			<aside class="oc" id="menu" role="navigation">
+				<h2>Aside content</h2>
+                <p>
+                	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+			</aside>
+			<div class="lorem mod">
+				<p>
+                	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+			</div>
+		</div>
+	
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<script>
+(function() {
+
+$(document).ready(function() {
+
+  $('body').addClass('js');
+
+  var $menu = $('#menu'),
+    $menulink = $('.menu-link'),
+    $wrap = $('#wrap');
+
+  $menulink.click(function() {
+    $menulink.toggleClass('active');
+    $wrap.toggleClass('active');
+    return false;
+  });
+});
+
+})();
+</script>
+
+</  </script>

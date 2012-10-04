@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>3 Equal-Width Columns</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<style>
+html,body,div { margin: 0; padding: 0; border: 0; }
+ol,ul { list-style: none; margin: 0; padding: 0; }
+table { border-collapse: collapse; border-spacing: 0; }
+header,footer,nav,section,article,hgroup,figure { display: block; }
+
+/*Generic styles*/
+body { background-color:#eee; font-family:tahoma; }
+footer { text-align:center;border-top:1px solid #999; }
+img { max-width:100%; }
+a { color:#666; }
+a:hover { color:#000; }
+
+/*layout styles*/
+.column {  }
+.inner { padding:1em; }
+@media screen and (min-width: 50em) {
+	.columns { overflow: hidden; }
+	.column { float: left; width: 33.3%; }
+}
+</style>
+
+<!--[if lt IE 9]>
+	<style>
+    	.columns {_zoom:1}
+    </style>
+	<script src="js/css3-mediaqueries.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+<div class="columns">
+  <div class="column">
+  	<div class="inner">  
+        <h1>Reflowing layouts</h1>
+        <ul>
+        	<li><a href="reflowing/mostly-fluid.html">Mostly fluid</a></li>
+            <li><a href="reflowing/column-drop.html">Column drop</a></li>
+            <li><a href="reflowing/layout-shifter.html">Layout shifter</a></li>
+        </ul>
+      </div>
+  </div>
+  <div class="column">
+    <div class="inner">  
+        <h1>Equal width</h1>
+    	<ul>
+        	<li><a href="equal-columns/2col.html">Two columns</a></li>
+            <li><a href="equal-columns/3col.html">Three columns</a></li>
+            <li><a href="equal-columns/4col.html">Four columns</a></li>
+        </ul>    
+	</div>
+  </div>
+  <div class="column">
+    <div class="inner">  
+        <h1>Off screen</h1>
+    	
+    </div>
+  </div>
+</div>
+<footer>
+	<p>- - -</p>
+</footer>
+</body>
+</html>
