@@ -5,7 +5,7 @@ header,footer,nav,section,article,hgroup,figure { display: block; }
 
 /*Generic styles*/
 body { background-color:#eee; font-family:tahoma; }
-footer { text-align:center;border-top:1px solid #999; }
+footer { padding:1em;border-top:1px solid #999; }
 img { max-width:100%; }
 a { color:#666; }
 a:hover { color:#000; }
