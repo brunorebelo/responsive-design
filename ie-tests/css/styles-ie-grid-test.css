@@ -32,7 +32,7 @@ a:hover { color:#000; }
 	.grid li {width:31%;}
 }
 @media screen and (min-width:1080px){
-	.column1 {width:65%;}
-	.column2 {width:34%;}
+	.column1 {width:62%;}
+	.column2 {width:38%;}
 	.grid li {width:22.5%;}
 }
