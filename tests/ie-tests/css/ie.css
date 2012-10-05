@@ -1,0 +1,8 @@
+.columns {zoom:1}
+
+
+/*IE6*/
+@media screen and (min-width: 30em) {
+	.ie6 img {width:100%;}
+	.ie6 .grid li {margin:0 1% 1% 0;}
+}

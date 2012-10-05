@@ -1,0 +1,38 @@
+html,body,div { margin: 0; padding: 0; border: 0; }
+ol,ul { list-style: none; margin: 0; padding: 0; }
+table { border-collapse: collapse; border-spacing: 0; }
+header,footer,nav,section,article,hgroup,figure { display: block; }
+
+/*Generic styles*/
+body { background-color:#eee; font-family:tahoma; }
+footer { padding:1em;border-top:1px solid #999; }
+img { max-width:100%;vertical-align:bottom; }
+a { color:#666; }
+a:hover { color:#000; }
+.column li {margin-bottom:.4em;}
+.desc {list-style-type:disc;margin-left:1em;padding-left:1em;}
+.column1 {background:#ddd;}
+.column2 {background:#ccc;}
+
+/*layout styles*/
+.wrap {max-width:1280px;margin:0 auto;}
+.grid { background:#bbb }
+.grid li { overflow:hidden;zoom:1; }
+@media screen and (min-width: 30em) {
+	.column1 {width:50%;float:left;}
+	.column2 {width:49%;float:right;}
+	
+	.grid {overflow:hidden;}
+	.grid li {width:47.5%;margin:0 2% 2% 0;float:left;}
+	
+}
+@media screen and (min-width: 40em) {
+	.column1 {width:60%;}
+	.column2 {width:39%;}
+	.grid li {width:31%;}
+}
+@media screen and (min-width:1080px){
+	.column1 {width:62%;}
+	.column2 {width:38%;}
+	.grid li {width:22.5%;}
+}
