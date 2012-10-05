@@ -11,13 +11,13 @@ a { color:#666; }
 a:hover { color:#000; }
 .column li {margin-bottom:.4em;}
 .desc {list-style-type:disc;margin-left:1em;padding-left:1em;}
-.column1 {}
+.column1 {background:#ddd;}
 .column2 {background:#ccc;}
 
 /*layout styles*/
 .wrap {max-width:1280px;margin:0 auto;}
-.grid {  }
-.grid li { margin-bottom:2%; }
+.grid { background:#bbb }
+.grid li { overflow:hidden;zoom:1; }
 @media screen and (min-width: 30em) {
 	.column1 {width:50%;float:left;}
 	.column2 {width:49%;float:right;}
