@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Mobile footer navigation</title>
+<title>Mobile select navigation</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <style>
@@ -24,10 +24,12 @@ a { color:#666; }
 a:hover { color:#000; }
 
 /*Layout styles*/
-header {margin-bottom:2em;}
+header, .content, footer {padding:.5em;}
+#nav {display:none;}
+.tinynav {width:100%;}
 @media screen and (min-width:600px) {
-	.nav-link {display:none;}
-	#nav {position:absolute;top:0;left:0;border:0;margin:0;}
+	.tinynav {display:none;}
+	#nav {display:block;}
 	#nav li {display:inline-block;margin-right:0.25em;}
 }
 </style>
@@ -36,21 +38,101 @@ header {margin-bottom:2em;}
 <body>
 
 <header>
-	<a class="nav-link" href="#nav">Menu</a>
+	<ul id="nav" role="navigation">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
 </header>
 <div class="content">
 	<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
 </div>
-<ul id="nav" role="navigation">
-	<li><a href="#">Home</a></li>
-    <li><a href="#">News</a></li>
-    <li><a href="#">Blog</a></li>
-    <li><a href="#">About</a></li>
-</ul>
 <footer>
 	<p>Footer</p>
 </footer>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+(function() {
+
+$(document).ready(function() {
+  /*! http://tinynav.viljamis.com v1.03 by @viljamis */
+	(function ($, window, i) {
+	  $.fn.tinyNav = function (options) {
+
+		// Default settings
+		var settings = $.extend({
+		  'active' : 'selected', // String: Set the "active" class
+		  'header' : false // Boolean: Show header instead of the active item
+		}, options);
+
+		return this.each(function () {
+
+		  // Used for namespacing
+		  i++;
+
+		  var $nav = $(this),
+			// Namespacing
+			namespace = 'tinynav',
+			namespace_i = namespace + i,
+			l_namespace_i = '.l_' + namespace_i,
+			$select = $('<select/>').addClass(namespace + ' ' + namespace_i);
+
+		  if ($nav.is('ul,ol')) {
+
+			if (settings.header) {
+			  $select.append(
+				$('<option/>').text('Navigation')
+			  );
+			}
+
+			// Build options
+			var options = '';
+
+			$nav
+			  .addClass('l_' + namespace_i)
+			  .find('a')
+			  .each(function () {
+				options +=
+				  '<option value="' + $(this).attr('href') + '">' +
+				  $(this).text() +
+				  '</option>';
+			  });
+
+			// Append options into a select
+			$select.append(options);
+
+			// Select the active item
+			if (!settings.header) {
+			  $select
+				.find(':eq(' + $(l_namespace_i + ' li')
+				.index($(l_namespace_i + ' li.' + settings.active)) + ')')
+				.attr('selected', true);
+			}
+
+			// Change window location
+			$select.change(function () {
+			  window.location.href = $(this).val();
+			});
+
+			// Inject select
+			$(l_namespace_i).after($select);
+
+		  }
+
+		});
+
+	  };
+	})(jQuery, this, 0);
+
+	$("#nav").tinyNav();});
+
+})();
+</script>
+
+
 </body>
 </html>
