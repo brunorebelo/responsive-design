@@ -1,0 +1,14 @@
+li {overflow:hidden}
+img {_width:100%;}
+@media screen and (min-width: 30em) {
+	ul {  }
+	li { display:inline; width: 33.2%; }
+}
+@media screen and (min-width: 45em) {
+	ul {  }
+	li { width: 49.9%; }
+}
+@media screen and (min-width: 60em) {
+	ul {  }
+	li { width: 24.9%; }
+}
