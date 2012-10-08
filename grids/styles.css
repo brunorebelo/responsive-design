@@ -17,15 +17,16 @@ body {
 }
 footer {text-align:center;border-top:1px solid #999;}
 img {max-width:100%;}
+dt,dd {display:block;}
 
 /*layout styles*/
 ul { max-width:1080px;margin:0 auto;padding:.25em; }
 li { }
 .img, .txt { margin:.25em;overflow:hidden; }
-img { display:block;}
+img { display:block;max-width:100%;}
 @media screen and (min-width: 25em) {
 	ul {  }
-	li { width: 33.3%;display:inline-block;vertical-align:top; }
+	li { width: 33.33333%;display:inline-block;vertical-align:top; }
 }
 @media screen and (min-width: 40em) {
 	ul {  }

@@ -1,14 +1,19 @@
-li {overflow:hidden}
-img {_width:100%;}
-@media screen and (min-width: 30em) {
+
+@media screen and (min-width: 25em) {
 	ul {  }
-	li { display:inline; width: 33.2%; }
+	li { *display:inline; *width: 33.2%; }
 }
-@media screen and (min-width: 45em) {
+@media screen and (min-width: 40em) {
 	ul {  }
-	li { width: 49.9%; }
+	li { *width: 49.9%; }
 }
-@media screen and (min-width: 60em) {
-	ul { _width:1080px;/*take that IE6! (adds horizontal scrollbar)*/ }
-	li { width: 24.9%; }
+@media screen and (min-width: 50em) {
+	ul {  }
+	li { *width: 24.9%; }
+}
+
+/*IE6*/
+.ie6 img {_width:100%;}
+@media screen and (min-width: 1079px) {
+	.ie6 ul { _width:1080px;/*take that IE6! (adds horizontal scrollbar)*/ }
 }
