@@ -9,6 +9,6 @@ img {_width:100%;}
 	li { width: 49.9%; }
 }
 @media screen and (min-width: 60em) {
-	ul {  }
+	ul { _width:1080px;/*take that IE6! (adds horizontal scrollbar)*/ }
 	li { width: 24.9%; }
 }
