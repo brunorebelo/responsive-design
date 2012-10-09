@@ -17,10 +17,10 @@ a:hover { color:#000; }
 /*layout styles*/
 .wrap {max-width:1280px;margin:0 auto;}
 .grid { background:#bbb }
-.grid li { overflow:hidden;zoom:1; }
+.grid li { overflow:hidden; }
 @media screen and (min-width: 30em) {
 	.column1 {width:50%;float:left;}
-	.column2 {width:49%;float:right;}
+	.column2 {width:50%;float:right;}
 	
 	.grid {overflow:hidden;}
 	.grid li {width:47.5%;margin:0 2% 2% 0;float:left;}
@@ -28,7 +28,7 @@ a:hover { color:#000; }
 }
 @media screen and (min-width: 40em) {
 	.column1 {width:60%;}
-	.column2 {width:39%;}
+	.column2 {width:40%;}
 	.grid li {width:31%;}
 }
 @media screen and (min-width:1080px){
