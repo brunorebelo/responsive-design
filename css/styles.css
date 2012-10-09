@@ -8,7 +8,7 @@ body { background-color:#eee; font-family:tahoma; font-size:.9em }
 .intro {padding:1em;}
 footer { padding:1em;border-top:1px solid #999; }
 img { max-width:100%; }
-a { color:#666; }
+a { color:#222;font-weight:bold; }
 a:hover { color:#000; }
 .column li {margin-bottom:.4em;}
 .desc {list-style-type:disc;margin-left:1em;padding-left:1em;}
