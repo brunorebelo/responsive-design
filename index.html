@@ -72,30 +72,60 @@
 
 <div class="columns">
   <div class="column">
-  	<div class="inner">  
-        <h1><a href="grid-test.html">Grid test</a></h1>
-      </div>
+		  	<div class="inner">  
+              <h1>Grid tests</h1>
+              <ul>
+              	<li><a href="tests/grid-test.html">v1</a></li>
+                <li><a href="tests/grid-test-v2.html">v2 (test in IE)</a></li>
+                <li><a href="tests/ie-tests/ie6-8-grid.html">IE test with box-sizing polyfill</a></li>
+              </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="inner">  
+                <h1>Navigation - no JS</h1>
+                <ul>
+                    <li><a href="navigation/footer-anchor.html">Bottom-anchored footer</a>
+                        <ul class="desc">
+                            <li>No JS depedency</li>
+                            <li>Easy to implement</li>
+                            <li>Scales up easily without much CSS</li>
+                            <li>Anchor/page jump</li>
+                        </ul>
+                    </li>
+                    <li><a href="navigation/select-nav.html">Top stacked links</a>
+                        <ul class="desc">
+                            <li>Takes up a lot of space</li>
+                            <li>Easy to implement, no JS required</li>
+                        </ul>
+                    </li>
+                    <li><a href="navigation/select-nav.html">Select navigation</a>
+                        <ul class="desc">
+                            <li>Frees up more space than horizontal/vertical navs</li>
+                            <li>Can use native controls/responses to up/down actions</li>
+                            <li>JS depedency</li>
+                            <li>Hard to style</li>
+                            <li>Confusing? Select menus usually used in form context</li>
+                        </ul>
+                    </li>
+                    <li><a href="navigation/toggle.html">Toggle navigation</a>
+                        <ul class="desc">
+                            <li>Easy to scale up</li>
+                            <li>No page jumps</li>
+                            <li>JS dependency (minimal)</li>
+                            <li>CSS animations (rendering issues on Android)</li>
+                            <li>*needs to be tested on older phones</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
   </div>
   <div class="column">
     <div class="inner">  
-        <h1>Navigation</h1>
+        <h1>Navigation - JS dependency</h1>
         <ul>
-        	<li><a href="navigation/footer-anchor.html">Bottom-anchored footer</a>
-            	<ul>
-                	<li>No JS depedency</li>
-                    <li>Easy to implement</li>
-                    <li>Scales up easily without much CSS</li>
-                    <li>Anchor/page jump</li>
-                </ul>
-            </li>
-            <li><a href="navigation/select-nav.html">Top stacked links</a>
-            	<ul>
-                	<li>Takes up a lot of space</li>
-                    <li>Easy to implement, no JS required</li>
-                </ul>
-            </li>
             <li><a href="navigation/select-nav.html">Select navigation</a>
-            	<ul>
+            	<ul class="desc">
                 	<li>Frees up more space than horizontal/vertical navs</li>
                     <li>Can use native controls/responses to up/down actions</li>
                     <li>JS depedency</li>
@@ -104,7 +134,7 @@
                 </ul>
             </li>
             <li><a href="navigation/toggle.html">Toggle navigation</a>
-            	<ul>
+            	<ul class="desc">
                 	<li>Easy to scale up</li>
                     <li>No page jumps</li>
                     <li>JS dependency (minimal)</li>
@@ -113,11 +143,6 @@
                 </ul>
             </li>
         </ul>
-	</div>
-  </div>
-  <div class="column">
-    <div class="inner">  
-        <h1>box</h1>
     </div>
   </div>
 </div>
