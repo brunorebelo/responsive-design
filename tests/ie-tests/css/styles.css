@@ -36,3 +36,17 @@ a:hover { color:#000; }
 	.column2 {width:38%;}
 	.grid li {width:22.5%;}
 }
+
+/*BOX SIZING EXAMPLE*/
+.bs {}
+
+@media screen and (min-width: 30em) {
+	.bs .grid li {padding:1em;box-sizing:border-box;}
+	
+}
+@media screen and (min-width: 40em) {
+	.bs .grid li {width:33.3%;}
+}
+@media screen and (min-width:1080px){
+	.bs .grid li {width:25%;}
+}

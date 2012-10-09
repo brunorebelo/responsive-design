@@ -16,3 +16,10 @@
 	.ie6 img {width:100%;}
 	.ie6 .grid li {margin:0 1% 1% 0;}
 }
+
+
+/*BOX SIZING EXAMPLE*/
+.bs {}
+@media screen and (min-width: 30em) {
+	.bs .grid li {*behavior: url(boxsizing.htc);}
+}
