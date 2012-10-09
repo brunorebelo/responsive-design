@@ -24,7 +24,7 @@ a { color:#666; }
 a:hover { color:#000; }
 
 /*Layout styles*/
-.nav-link {float:right;}
+.nav-link {float:right;padding:.5em}
 #nav {
 	clear: both;
 	-webkit-transition: all 0.3s ease-out;  
@@ -33,22 +33,11 @@ a:hover { color:#000; }
 	-o-transition: all 0.3s ease-out;
 	transition: all 0.3s ease-out;
 }
-.js #nav {
-	overflow: hidden;
-	max-height: 0;
-}
-#nav.active {
-	max-height: 15em;
-}
-
-#nav li a {
-	display: block;
-	padding: 0.8em;
-	border-bottom: 1px solid #808080;
-}
-
+.js #nav {overflow:hidden;max-height:0;}
+#nav.active {max-height:15em;}
+#nav li a {display:block;padding:0.8em;border-bottom:1px solid #808080;}
 @media screen and (min-width: 48.25em) {
-	a.nav-link {display: none;}
+	a.nav-link {display:none;}
 	.js #nav {max-height:none;}
 	#nav li {display: inline-block;}
 }
