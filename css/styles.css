@@ -20,3 +20,8 @@ a:hover { color:#000; }
 	.columns { overflow: hidden; }
 	.column { float: left; width: 33.3%; }
 }
+
+/*IE6*/
+@media screen and (min-width: 1200px) {
+	.ie6 .wrap {*width:1200px;}
+}
