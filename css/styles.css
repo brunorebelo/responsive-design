@@ -13,6 +13,8 @@ a:hover { color:#000; }
 .column li {margin-bottom:.4em;}
 .desc {list-style-type:disc;margin-left:1em;padding-left:1em;}
 
+.wrap {max-width:1200px;margin:0 auto;}
+
 /*layout styles*/
 .column {  }
 .inner { padding:1em; }
