@@ -2,14 +2,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>3 Equal-Width Columns</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Responsive design patterns</title>
 
 <link type="text/css" rel="stylesheet" href="css/styles.css">
 <style>
 	@media screen and (min-width: 50em) {
 		.columns { overflow: hidden; }
-		.column { float: left; width: 33.3%; }
+		.column { float: left; width: 25%; }
 	}
 </style>
 <!--[if lt IE 9]>
@@ -76,9 +77,7 @@
         </ul>
     </div>
   </div>
-</div>
-
-<div class="columns">
+  
   <div class="column">
 		  	<div class="inner">  
               <h1>Grid tests</h1>
@@ -89,7 +88,11 @@
               </ul>
             </div>
         </div>
-        <div class="column">
+  
+</div>
+
+<div class="columns">
+  <div class="column">
             <div class="inner">  
                 <h1>Navigation - no JS</h1>
                 <ul>
