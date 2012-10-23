@@ -41,7 +41,7 @@ a:hover { color:#000; }
 .bs {}
 
 @media screen and (min-width: 30em) {
-	.bs .grid li {padding:1em;box-sizing:border-box;}
+	.bs .grid li {padding:1em;box-sizing:border-box;margin:0;}
 	
 }
 @media screen and (min-width: 40em) {
